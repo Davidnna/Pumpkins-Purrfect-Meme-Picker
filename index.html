@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;800&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="styles/style.css">
+		<link rel="icon" type="image/png" href="images/pumpkin.png">
+		<!-- <link rel="icon" type="image/png" href="https://i.postimg.cc/Mp8KbFQ3/pumpkin.png"> -->
+		<title>Pumpkin's Purrfect Meme Picker</title>
+	</head>
+	<body>
+		<header>
+			<div class="header-inner">
+				<img src="./images/pumpkin.png" class="pumpkin-img" alt="A black and white cat with it's mouth open">
+				<!-- <img src="https://i.postimg.cc/Mp8KbFQ3/pumpkin.png" class="pumpkin-img" alt="A black and white cat with it's mouth open"> -->
+				<hgroup>
+					<h2>Pumpkin's Purrfect...</h2>
+					<h1>Meme Picker</h1>
+				</hgroup>
+			</div>
+		</header>
+		<main>
+			<label for="emotion-select"><h3>Select Your Current Emotion</h3></label>
+			<div class="controls-container">
+				<h4>Use the radio buttons for a gallery</h4>
+				<div class="emotion-radios" id="emotion-radios"></div>
+				<h4>Use the dropdown Menu for a Single Meme</h4>
+				<select name="emotions" class="emotion-select" id="emotion-select"></select>
+				<div class="gifs-check">
+					<label for="gifs-only-option" class="gifs-check-label">Animated GIFs only<input type="checkbox" id="gifs-only-option"></label>
+				</div>
+				<button type="button" class="get-image-btn" id="get-image-btn">Get Image</button>
+			</div>
+		</main>
+		<div class="meme-modal" id="meme-modal">
+			<button type="button" class="meme-modal-close-btn" id="meme-modal-close-btn">X</button>
+			<div id="meme-modal-inner"></div>
+		</div><script src="scripts/data.js"></script>
+		<script src="scripts/script.js"></script>
+	</body>
+</html>

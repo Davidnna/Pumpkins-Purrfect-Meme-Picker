@@ -1,0 +1,182 @@
+html, body {
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+    text-align: center;
+}
+
+/*typography*/
+h1, h2 {
+    color: #EED6D3;
+    margin: 0;
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 19px;
+    margin: 25px auto;
+}
+
+h4 {
+    margin: 10px 0;
+}
+
+/* layout */
+header {
+    background-color: #67595E;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 370px;
+    gap: 15px;
+    padding: 10px 0 0 10px;
+}
+
+.pumpkin-img {
+    width: 80px;
+}
+
+.controls-container {
+    max-width: 200px;
+    margin: 0 auto 8px;
+}
+
+/* controls */
+.emotion-radios {
+    border: 1px solid #bcbcbc;
+    border-radius: 5px;
+}
+
+.emotion-select {
+    border: 1px solid #bcbcbc;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    font-family: 'Karla', sans-serif;
+    padding: 7px;
+    background: none;
+    margin-top: 20px;
+}
+
+option {
+    color: black;
+    font-weight: normal;
+    background-color: white;
+}
+
+.emotion-select option:disabled {
+    background-color: #ececec;
+}
+
+.emotion-select .placeholder {
+    color: unset;
+    font-weight: unset;
+    background-color: unset;
+}
+
+.emotion-select.selected, option:checked {
+    background-color: #fff0ee;
+    color: #bd301d;
+    font-weight: bold;
+}
+
+.radio {
+    display: flex;
+    border-bottom: 1px solid #bcbcbc;
+}
+
+.radio:last-child {
+    border-bottom: 0;
+}
+
+.radio:has(input[type="radio"]:checked) {
+    background-color: #fff0ee;
+    color: #bd301d;
+    font-weight: bold;
+    accent-color: #bd301d;
+}
+
+label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 7px 11px;
+    width: 100%;
+    cursor: pointer;
+}
+
+label:has(h3) {
+    padding: 0;
+}
+
+input {
+    cursor: pointer;
+}
+
+.gifs-check {
+    margin: 16px 38px 16px 16px;
+}
+
+.get-image-btn {
+    background-color: #67595e;
+    color: #eed6d3;
+    padding: 15px 19px;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* modal */
+.meme-modal {
+    display: none; /*flex when displayed*/
+    position: fixed;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    bottom: 4px;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    gap: 20px;
+    border: 1px solid #67595e;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 50%;
+    min-height: 490px;
+    max-height: 600px;
+    overflow: auto;
+    background-color: #fff0ee;
+}
+
+.cat-img {
+    width: 60%;
+    height: 60%;
+    border-radius: 5px;
+}
+
+.meme-modal-close-btn {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    background-color: transparent;
+    border: 2px solid #555;
+    color: #555;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.meme-modal-close-btn:hover {
+    color: white;
+    background-color: #bd301d;
+    border: 2px solid #bd301d;
+}
