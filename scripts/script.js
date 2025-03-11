@@ -28,6 +28,12 @@ function selectSelect () {
     }
 }
 
+window.addEventListener("click", (event) => {
+    if (memeModal.style.display === "grid" && !memeModalInner.contains(event.target) && event.target.type !== "button" ) {
+        memeModal.style.display = "none"
+    }
+})
+
 function closeModal(){
     memeModal.style.display = 'none'
 }

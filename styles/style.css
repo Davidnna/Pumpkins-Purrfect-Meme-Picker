@@ -16,12 +16,7 @@ h2 {
 }
 
 h3 {
-    font-size: 19px;
     margin: 25px auto;
-}
-
-h4 {
-    margin: 10px 0;
 }
 
 /* layout */
@@ -111,8 +106,9 @@ label {
     cursor: pointer;
 }
 
-label:has(h3) {
+label:has(h4) {
     padding: 0;
+    font-size: 15.5px;
 }
 
 input {
