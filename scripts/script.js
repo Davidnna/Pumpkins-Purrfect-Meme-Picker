@@ -4,38 +4,35 @@ const getImageBtn = document.getElementById('get-image-btn')
 const gifsOnlyOption = document.getElementById('gifs-only-option')
 const memeModalInner = document.getElementById('meme-modal-inner')
 const memeModal = document.getElementById('meme-modal')
-const memeModalCloseBtn = document.getElementById('meme-modal-close-btn')
 
 emotionRadios.addEventListener('change', selectRadio)
 
 emotionSelect.addEventListener('change', selectSelect)
 
-memeModalCloseBtn.addEventListener('click', closeModal)
+document.addEventListener("click", closeModal)
 
 getImageBtn.addEventListener('click', renderCat)
     
 function selectRadio () {
     emotionSelect.selectedIndex = 0
     emotionSelect.classList.remove('selected')
+    getImageBtn.disabled = false
 }
     
 function selectSelect () {
     const radioButtons = document.querySelectorAll('input[name="emotions"]')
     radioButtons.forEach(radio => radio.checked = false)
+    getImageBtn.disabled = false
     
     if (emotionSelect.selectedIndex !== 0) {
         emotionSelect.classList.add('selected')
     }
 }
 
-window.addEventListener("click", (event) => {
-    if (memeModal.style.display === "grid" && !memeModalInner.contains(event.target) && event.target.type !== "button" ) {
+function closeModal(event){
+    if ((memeModal.style.display === "grid" && !memeModalInner.contains(event.target) && event.target.type !== "button") || event.target.innerHTML === "X" ) {
         memeModal.style.display = "none"
     }
-})
-
-function closeModal(){
-    memeModal.style.display = 'none'
 }
 
 function renderCat(){
